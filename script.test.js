@@ -36,6 +36,7 @@ describe('calculator functions', () => {
     })
 })
 
+// Caesar Cipher
 describe('Caesar Cipher function', () => {
     it('Base test', () => {
         expect(script.caesarCipher('xyz', 3)).toBe('abc');
@@ -45,5 +46,17 @@ describe('Caesar Cipher function', () => {
     })
     it('Non Alphabatic characters test', () => {
         expect(script.caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+    })
+})
+
+// Analyze array
+describe('Analyze array function', () => {
+    it('Main test', () => {
+        expect(script.analyze([1,8,3,4,2,6])).toEqual({
+            average: 4,
+            min: 1,
+            max: 8,
+            length: 6
+        });
     })
 })

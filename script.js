@@ -76,4 +76,20 @@ function caesarCipher(string, shift) {
     return decryptedString;
 }
 
-export {capitalise, reverseString, calculator, caesarCipher};
+function analyze(arr) {
+    const sum = arr.reduce((start, current) => start + current, 0);
+    let average = sum / arr.length;
+
+    const min = arr.reduce((min, curr) => Math.min(min, curr));
+    const max = arr.reduce((max, curr) => Math.max(max, curr));
+    const length = arr.length;
+
+    return {
+        "average": average,
+        "min": min,
+        "max": max,
+        "length": length
+    }
+}
+
+export {capitalise, reverseString, calculator, caesarCipher, analyze};
